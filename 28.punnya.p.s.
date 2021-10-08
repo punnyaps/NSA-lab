@@ -1,0 +1,87 @@
+exam@debian:~$ mkdir fisat
+exam@debian:~$ cd fisat
+exam@debian:~/fisat$ mkdir day1
+exam@debian:~/fisat$ cd day1
+exam@debian:~/fisat/day1$ cat>f1.txt
+f1.txt
+^C
+exam@debian:~/fisat/day1$ cat>f2.txt
+f2.txt
+^C
+exam@debian:~/fisat/day1$ cat>f3.txt
+f3.txt
+^C
+exam@debian:~/fisat/day1$ cd ..
+exam@debian:~/fisat$ mkdir day2
+exam@debian:~/fisat$ cd day2
+exam@debian:~/fisat/day2$ m1.txt
+bash: m1.txt: command not found
+exam@debian:~/fisat/day2$ cat>m1.txt
+m1.txt
+^C
+exam@debian:~/fisat/day2$ cat>m2.txt
+m2.txt
+^C
+exam@debian:~/fisat/day2$ cd ..
+exam@debian:~/fisat$ mkdir day3
+exam@debian:~/fisat$ cd day3
+exam@debian:~/fisat/day3$ cat>c1.txt
+c1.txt
+^C
+exam@debian:~/fisat/day3$ cat>c2.txt
+c2.txt
+^C
+exam@debian:~/fisat/day3$ cd ..
+4) exam@debian:~/fisat$ ps
+    PID TTY          TIME CMD
+   3879 pts/1    00:00:00 bash
+   4114 pts/1    00:00:00 ps
+
+3)exam@debian:~/fisat/day1$ chmod a+w f1.txt
+exam@debian:~/fisat/day1$ ls -l
+total 12
+-rw-rw-rw- 1 exam exam 7 Oct  8 10:27 f1.txt
+-rw-r--r-- 1 exam exam 7 Oct  8 10:27 f2.txt
+-rw-r--r-- 1 exam exam 7 Oct  8 10:27 f3.txt
+
+1)exam@debian:~/fisat$ cd day2
+exam@debian:~/fisat/day2$ cat m1.txt m2.txt >> m3.txt
+exam@debian:~/fisat/day2$ cat m3.txt
+m1.txt
+m2.txt
+
+5)exam@debian:~/fisat/day1$ pwd
+/home/exam/fisat/day1 
+
+
+
+(2)
+echo -e "menu \n 1.area of circle \n 2.area of rectangle \n 3.area of triangle"
+echo enter the choice
+read ch
+case $ch in
+    1)echo "enter the radius"
+      read r
+      area=`expr $r \* $r \* 22`
+      m=`expr $area / 7` 
+      echo "area is :$m" ;;
+     2)echo "enter the length"
+	read l
+	echo "enter the breadth"
+	read b
+	d=`expr $l \* $b`
+	echo "area is :$d" ;;
+     3)echo "enter the height"
+       read h
+       echo "enter the breadth"
+       read p
+       k=`expr $h \* $p`
+       n=`expr $k / 2`
+       echo "area is:$n" ;;
+     esac
+	
+
+
+
+
+
